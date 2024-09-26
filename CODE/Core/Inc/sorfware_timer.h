@@ -14,7 +14,9 @@ extern int timer2_flag;
 
 void setTimer1(int duration);
 void setTimer2(int duration);
-void run_exercise2();
+void run_exercise2_1();
+void run_exercise2_2();
+
 void timerRun();
 
 #endif /* INC_SORFWARE_TIMER_H_ */

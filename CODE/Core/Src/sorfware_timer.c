@@ -65,7 +65,7 @@ void display7SEG(int num){
 			break;
 	}
 }
-void run_exercise2(){
+void run_exercise2_1(){
 	switch(led7_status){
 		case 1:
 			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, GPIO_PIN_RESET);
@@ -102,6 +102,8 @@ void run_exercise2(){
 		default:
 			break;
 	}
+}
+void run_exercise2_2(){
 	HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 }
 void timerRun(){
