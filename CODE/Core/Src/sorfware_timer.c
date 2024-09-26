@@ -9,7 +9,7 @@
 int timer1_counter = 0;
 int timer1_flag = 0;
 
-int led7_status = LED_1;
+int led7_status = 1;
 
 void setTimer1(int duration){
 	timer1_counter = duration;
