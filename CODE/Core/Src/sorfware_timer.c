@@ -40,7 +40,7 @@ void display7SEG(int num){
 			break;
 	}
 }
-void chay(){
+void run_exercise1(){
 	switch(led7_status){
 		case 1:
 			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, GPIO_PIN_RESET);
@@ -51,8 +51,8 @@ void chay(){
 		case 2:
 			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, GPIO_PIN_SET);
 			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, GPIO_PIN_RESET);
-			display7SEG(1);
-			led7_status = 2;
+			display7SEG(2);
+			led7_status = 1;
 			break;
 		default:
 			break;

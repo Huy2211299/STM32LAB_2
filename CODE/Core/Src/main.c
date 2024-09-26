@@ -100,7 +100,7 @@ int main(void)
 	  if(timer1_flag == 1){
 		  setTimer1(50);
 		  //TO DO Ex1
-		  chay();
+		  run_exercise1();
 	  }
     /* USER CODE END WHILE */
 

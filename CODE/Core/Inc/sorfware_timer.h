@@ -15,7 +15,7 @@ extern int timer1_flag;
 #define LED_2 2
 
 void setTimer1(int duration);
-void chay();
+void run_exercise1();
 void timerRun();
 
 #endif /* INC_SORFWARE_TIMER_H_ */
