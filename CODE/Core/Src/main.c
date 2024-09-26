@@ -95,12 +95,13 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   setTimer1(50);
+  setTimer2(100);
   while (1)
   {
 	  if(timer1_flag == 1){
-	  		  setTimer1(50);
-	  		  //TO DO Ex1
-	  		  run_exercise2();
+		  setTimer1(50);
+		  //TO DO Ex1
+		  run_exercise2();
 	  }
     /* USER CODE END WHILE */
 
