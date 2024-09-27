@@ -92,6 +92,25 @@ void update7SEG ( int index ){
 			break;
 	}
 }
+int hour = 15 , minute = 8 , second = 50;
+void updateClockBuffer(){
+	if(hour <= 9){
+		led_buffer[0] = 0;
+		led_buffer[1] = hour;
+	}
+	if(hour >= 10){
+		led_buffer[0] = hour / 10;
+		led_buffer[1] = hour % 10;
+	}
+	if(minute <= 9){
+		led_buffer[2] = 0;
+		led_buffer[3] = minute;
+	}
+	if(minute >= 10){
+		led_buffer[2] = minute / 10;
+		led_buffer[3] = minute % 10;
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -139,11 +158,28 @@ int main(void)
 		  update7SEG(index_led++);
 	  }
 	  if(index_led == MAX_LED)index_led = 0;
+///////////////////////////////////////////
 	  if(timer2_flag == 1){
 		  setTimer2(100);
 		  //TO DO Ex4
 		  run_exercise4();
 	  }
+///////////////////////////////////////////
+	  second ++;
+	  if ( second >= 60) {
+		  second = 0;
+		  minute ++;
+	  }
+	  if( minute >= 60) {
+		  minute = 0;
+		  hour ++;
+	  }
+	  if( hour >=24) {
+		  hour = 0;
+	  }
+	  updateClockBuffer () ;
+	  HAL_Delay (1000) ;
+///////////////////////////////////////////
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
