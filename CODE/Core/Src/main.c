@@ -135,7 +135,7 @@ int main(void)
   {
 	  if(timer1_flag == 1){
 		  setTimer1(25);
-		  //TO DO Ex3
+		  //TO DO Ex5
 		  update7SEG(index_led++);
 	  }
 	  if(index_led == MAX_LED)index_led = 0;
