@@ -1,2 +1,7 @@
-sorfware_timer.c:12:6:setTimer1	16	static
-sorfware_timer.c:17:6:timerRun	4	static
+sorfware_timer.c:15:6:setTimer1	16	static
+sorfware_timer.c:19:6:setTimer2	16	static
+sorfware_timer.c:24:6:display7SEG	16	static
+sorfware_timer.c:123:6:update7SEG	16	static
+sorfware_timer.c:155:6:run_exercise2_1	8	static
+sorfware_timer.c:188:6:run_exercise2_2	8	static
+sorfware_timer.c:192:6:timerRun	4	static
