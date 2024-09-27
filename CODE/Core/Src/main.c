@@ -57,6 +57,41 @@ static void MX_GPIO_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+const int MAX_LED = 4;
+int index_led = 0;
+int led_buffer [4] = {1, 4, 0, 1};
+void update7SEG ( int index ){
+	switch(index){
+		case 0:
+			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, GPIO_PIN_SET);
+			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, GPIO_PIN_SET);
+			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, GPIO_PIN_SET);
+			display7SEG(led_buffer[index]);
+			break;
+		case 1:
+			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, GPIO_PIN_SET);
+			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, GPIO_PIN_SET);
+			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, GPIO_PIN_SET);
+			display7SEG(led_buffer[index]);
+			break;
+		case 2:
+			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, GPIO_PIN_SET);
+			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, GPIO_PIN_SET);
+			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, GPIO_PIN_SET);
+			display7SEG(led_buffer[index]);
+			break;
+		case 3:
+			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, GPIO_PIN_SET);
+			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, GPIO_PIN_SET);
+			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, GPIO_PIN_SET);
+			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, GPIO_PIN_RESET);
+			display7SEG(led_buffer[index]);
+			break;
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -100,13 +135,14 @@ int main(void)
   {
 	  if(timer1_flag == 1){
 		  setTimer1(50);
-		  //TO DO Ex2
-		  run_exercise2_1();
+		  //TO DO Ex3
+		  update7SEG(index_led++);
 	  }
+	  if(index_led == MAX_LED)index_led = 0;
 	  if(timer2_flag == 1){
 		  setTimer2(100);
-		  //TO DO Ex2
-		  run_exercise2_2();
+		  //TO DO Ex3
+		  run_exercise3();
 	  }
     /* USER CODE END WHILE */
 
@@ -237,7 +273,8 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+//int counter_7seg = 50;// initial timer counter for led 7-SEG
+//int counter_LED_RED = 100;// initial timer counter for LED-RED
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	timerRun();
 }

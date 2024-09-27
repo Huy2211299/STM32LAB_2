@@ -1,7 +1,7 @@
 /*
  * sorfware_timer.h
  *
- *  Created on: Sep 25, 2024
+ *  Created on: Sep 27, 2024
  *      Author: VO HOANG HUY
  */
 
@@ -14,8 +14,8 @@ extern int timer2_flag;
 
 void setTimer1(int duration);
 void setTimer2(int duration);
-void run_exercise2_1();
-void run_exercise2_2();
+void display7SEG(int num);
+void run_exercise3();
 void update7SEG(int index);
 
 void timerRun();
