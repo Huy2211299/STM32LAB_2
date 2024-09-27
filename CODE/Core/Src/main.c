@@ -141,7 +141,7 @@ int main(void)
 	  if(index_led == MAX_LED)index_led = 0;
 	  if(timer2_flag == 1){
 		  setTimer2(100);
-		  //TO DO Ex3
+		  //TO DO Ex4
 		  run_exercise3();
 	  }
     /* USER CODE END WHILE */
