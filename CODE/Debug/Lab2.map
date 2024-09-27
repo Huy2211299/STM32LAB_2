@@ -2302,9 +2302,9 @@ LOAD d:/vi xu ly vi di e zu ka hi en/stm32cubeide_1.7.0/stm32cubeide/plugins/com
  .text.display7SEG
                 0x0000000008000514      0x320 ./Core/Src/sorfware_timer.o
                 0x0000000008000514                display7SEG
- .text.run_exercise3
+ .text.run_exercise4
                 0x0000000008000834       0x14 ./Core/Src/sorfware_timer.o
-                0x0000000008000834                run_exercise3
+                0x0000000008000834                run_exercise4
  .text.timerRun
                 0x0000000008000848       0x5c ./Core/Src/sorfware_timer.o
                 0x0000000008000848                timerRun

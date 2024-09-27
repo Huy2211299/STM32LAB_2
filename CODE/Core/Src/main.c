@@ -129,12 +129,12 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  setTimer1(50);
+  setTimer1(25);
   setTimer2(100);
   while (1)
   {
 	  if(timer1_flag == 1){
-		  setTimer1(50);
+		  setTimer1(25);
 		  //TO DO Ex3
 		  update7SEG(index_led++);
 	  }
@@ -142,7 +142,7 @@ int main(void)
 	  if(timer2_flag == 1){
 		  setTimer2(100);
 		  //TO DO Ex4
-		  run_exercise3();
+		  run_exercise4();
 	  }
     /* USER CODE END WHILE */
 
