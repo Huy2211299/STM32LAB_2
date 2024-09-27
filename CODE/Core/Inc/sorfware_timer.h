@@ -16,7 +16,6 @@ void setTimer1(int duration);
 void setTimer2(int duration);
 void display7SEG(int num);
 void run_exercise3();
-void update7SEG(int index);
 
 void timerRun();
 
