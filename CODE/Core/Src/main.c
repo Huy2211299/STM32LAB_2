@@ -90,6 +90,8 @@ void update7SEG ( int index ){
 			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, GPIO_PIN_RESET);
 			display7SEG(led_buffer[index]);
 			break;
+		default:
+			break;
 	}
 }
 /* USER CODE END 0 */
@@ -135,7 +137,7 @@ int main(void)
   {
 	  if(timer1_flag == 1){
 		  setTimer1(25);
-		  //TO DO Ex3
+		  //TO DO Ex4
 		  update7SEG(index_led++);
 	  }
 	  if(index_led == MAX_LED)index_led = 0;
