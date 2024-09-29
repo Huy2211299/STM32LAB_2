@@ -283,7 +283,7 @@ int main(void)
 		  setTimer1(25);
  80002a6:	2019      	movs	r0, #25
  80002a8:	f000 f90e 	bl	80004c8 <setTimer1>
-		  //TO DO Ex4
+		  //TO DO Ex
 		  update7SEG(index_led++);
  80002ac:	4b0e      	ldr	r3, [pc, #56]	; (80002e8 <main+0x70>)
  80002ae:	681b      	ldr	r3, [r3, #0]
