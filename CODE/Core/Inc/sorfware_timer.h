@@ -10,7 +10,17 @@
 
 #include "main.h"
 
+#define MAX_LED 4
+
+extern int hour, minute, second;
+void clock();
+
 void display7SEG(int num);
+void update7SEG ( int index );
+
+extern int index_led;
+extern int led_buffer [];
+void updateClockBuffer () ;
 
 extern int timer1_flag;
 void setTimer1(int duration);
@@ -23,6 +33,5 @@ void setTimer3(int duration);
 
 void run_exercise7();
 void timerRun();
-
 
 #endif /* INC_SORFWARE_TIMER_H_ */
