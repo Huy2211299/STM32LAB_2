@@ -9,11 +9,20 @@
 #define INC_SORFWARE_TIMER_H_
 
 #include "main.h"
-extern int timer1_flag;
-extern int timer2_flag;
 
 void display7SEG(int num);
 
-void run_exercise5();
+extern int timer1_flag;
+void setTimer1(int duration);
+
+extern int timer2_flag;
+void setTimer2(int duration);
+
+extern int timer3_flag;
+void setTimer3(int duration);
+
+void run_exercise7();
+void timerRun();
+
 
 #endif /* INC_SORFWARE_TIMER_H_ */
