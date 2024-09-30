@@ -172,6 +172,12 @@ void updateClockBuffer(){
 		led_buffer[3] = minute % 10;
 	}
 }
+int index_led_matrix = 0;
+uint8_t matrix_buffer [8] = {0x01 , 0x02 , 0x03 , 0x04 , 0x05 , 0x06 , 0x07 , 0x08 };
+void displayLEDMatrix(int r, int c){
+
+}
+
 int timer1_flag = 0;
 int timer1_counter = 0;
 
