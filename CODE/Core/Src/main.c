@@ -97,6 +97,7 @@ int main(void)
   setTimer1(100);
   setTimer2(100);
   setTimer3(25);
+  setTimer4(1);
   while (1)
   {
 	  if(timer1_flag == 1){
@@ -118,6 +119,15 @@ int main(void)
 			  index_led = 0;
 		  }
 	  }
+	  if(timer4_flag == 1){
+		  setTimer4(1);
+		  //TO DO
+		  updateLEDMatrix(index_led_matrix++);
+		  if(index_led_matrix == MAX_LED_MATRIX){
+			  index_led_matrix = 0;
+		  }
+	  }
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -24,8 +24,8 @@ extern int led_buffer [];
 void updateClockBuffer () ;
 
 extern int index_led_matrix;
-extern uint8_t matrix_buffer [8];
-void displayLEDMatrix(int r, int c);
+extern uint8_t matrix_buffer [];
+void displayLEDMatrix(int row, int col);
 void updateLEDMatrix (int index );
 
 extern int timer1_flag;
