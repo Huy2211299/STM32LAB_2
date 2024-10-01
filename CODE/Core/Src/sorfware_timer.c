@@ -105,6 +105,7 @@ void run_exercise2_1(){
 }
 void run_exercise2_2(){
 	HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+	HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
 }
 void timerRun(){
 	if(timer1_counter > 0){

@@ -100,12 +100,12 @@ int main(void)
   {
 	  if(timer1_flag == 1){
 		  setTimer1(50);
-		  //TO DO Ex2
+		  //TO DO
 		  run_exercise2_1();
 	  }
 	  if(timer2_flag == 1){
 		  setTimer2(100);
-		  //TO DO Ex2
+		  //TO DO
 		  run_exercise2_2();
 	  }
     /* USER CODE END WHILE */
