@@ -103,7 +103,3 @@ void display7SEG(int num){
 	}
 }
 
-void run_exercise5(){
-	HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-}
-

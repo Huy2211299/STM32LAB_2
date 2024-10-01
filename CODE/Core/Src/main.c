@@ -299,7 +299,6 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-/////////////////////////////////////////////////////////////
 int timer1_counter = 25;
 int timer2_counter = 100;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
@@ -312,13 +311,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		}
 	}
 	if(index_led >= MAX_LED)index_led = 0;
-////////////////////////////////////////////////////////////
 	if(timer2_counter > 0){
 		timer2_counter--;
 		if(timer2_counter <= 0){
 			timer2_counter = 100;
 			//TO DO
-			run_exercise5();
+			HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+			HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
 		}
 	}
 }
