@@ -173,7 +173,7 @@ void updateClockBuffer(){
 	}
 }
 int index_led_matrix = 0;
-uint8_t matrix_buffer [8] = {0x00,0x66,0xff,0xff,0x7e,0x3c,0x18,0x00};
+uint8_t matrix_buffer [8] = {0x10,0x30,0x70,0xff,0xff,0x70,0x30,0x10};
 void shift(int col){
 	HAL_GPIO_WritePin(ENM7_GPIO_Port, ENM7_Pin, 1 - (col & 1));
 	col = col >> 1;
@@ -315,6 +315,16 @@ void updateLEDMatrix (int index ){
 		break;
 	}
 }
+void updateLEDMatrixBuffer(){
+	matrix_buffer[0] = (matrix_buffer[0] << 1) | (matrix_buffer[0] >> 7);
+	matrix_buffer[1] = (matrix_buffer[1] << 1) | (matrix_buffer[1] >> 7);
+	matrix_buffer[2] = (matrix_buffer[2] << 1) | (matrix_buffer[2] >> 7);
+	matrix_buffer[3] = (matrix_buffer[3] << 1) | (matrix_buffer[3] >> 7);
+	matrix_buffer[4] = (matrix_buffer[4] << 1) | (matrix_buffer[4] >> 7);
+	matrix_buffer[5] = (matrix_buffer[5] << 1) | (matrix_buffer[5] >> 7);
+	matrix_buffer[6] = (matrix_buffer[6] << 1) | (matrix_buffer[6] >> 7);
+	matrix_buffer[7] = (matrix_buffer[7] << 1) | (matrix_buffer[7] >> 7);
+}
 int timer1_flag = 0;
 int timer1_counter = 0;
 
@@ -326,6 +336,9 @@ int timer3_counter = 0;
 
 int timer4_flag = 0;
 int timer4_counter = 0;
+
+int timer5_flag = 0;
+int timer5_counter = 0;
 
 void setTimer1(int duration){
 	timer1_counter = duration;
@@ -345,6 +358,10 @@ void setTimer3(int duration){
 void setTimer4(int duration){
 	timer4_counter = duration;
 	timer4_flag = 0;
+}
+void setTimer5(int duration){
+	timer5_counter = duration;
+	timer5_flag = 0;
 }
 
 void timerRun(){
@@ -370,6 +387,12 @@ void timerRun(){
 		timer4_counter--;
 		if(timer4_counter <= 0){
 			timer4_flag = 1;
+		}
+	}
+	if(timer5_counter > 0){
+		timer5_counter--;
+		if(timer5_counter <= 0){
+			timer5_flag = 1;
 		}
 	}
 }

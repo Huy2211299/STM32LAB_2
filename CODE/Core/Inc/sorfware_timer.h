@@ -27,6 +27,7 @@ extern int index_led_matrix;
 extern uint8_t matrix_buffer [];
 void displayLEDMatrix(int row, int col);
 void updateLEDMatrix (int index );
+void updateLEDMatrixBuffer();
 
 extern int timer1_flag;
 void setTimer1(int duration);
@@ -39,6 +40,9 @@ void setTimer3(int duration);
 
 extern int timer4_flag;
 void setTimer4(int duration);
+
+extern int timer5_flag;
+void setTimer5(int duration);
 
 void run_exercise7();
 void timerRun();

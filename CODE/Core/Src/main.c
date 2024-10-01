@@ -98,6 +98,7 @@ int main(void)
   setTimer2(100);
   setTimer3(25);
   setTimer4(1);
+  setTimer5(100);
   while (1)
   {
 	  if(timer1_flag == 1){
@@ -126,6 +127,11 @@ int main(void)
 		  if(index_led_matrix == MAX_LED_MATRIX){
 			  index_led_matrix = 0;
 		  }
+	  }
+	  if(timer5_flag == 1){
+		  setTimer5(100);
+		  //TO DO
+		  updateLEDMatrixBuffer();
 	  }
 
     /* USER CODE END WHILE */
