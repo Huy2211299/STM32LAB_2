@@ -21,7 +21,6 @@ void setTimer2(int duration);
 extern int timer3_flag;
 void setTimer3(int duration);
 
-void run_exercise7();
 void timerRun();
 
 

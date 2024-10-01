@@ -3,4 +3,3 @@ sorfware_timer.c:114:6:setTimer1	16	static
 sorfware_timer.c:119:6:setTimer2	16	static
 sorfware_timer.c:124:6:setTimer3	16	static
 sorfware_timer.c:129:6:timerRun	4	static
-sorfware_timer.c:149:6:run_exercise7	8	static

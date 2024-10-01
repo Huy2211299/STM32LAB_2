@@ -146,8 +146,3 @@ void timerRun(){
 		}
 	}
 }
-void run_exercise7(){
-	HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-}
-
-
