@@ -57,6 +57,7 @@ void run_exercise1(){
 		default:
 			break;
 	}
+	HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
 }
 void timerRun(){
 	if(timer1_counter > 0){
