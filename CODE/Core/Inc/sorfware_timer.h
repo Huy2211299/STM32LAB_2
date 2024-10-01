@@ -44,7 +44,6 @@ void setTimer4(int duration);
 extern int timer5_flag;
 void setTimer5(int duration);
 
-void run_exercise7();
 void timerRun();
 
 #endif /* INC_SORFWARE_TIMER_H_ */
