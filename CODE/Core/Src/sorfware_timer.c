@@ -118,10 +118,6 @@ void display7SEG(int num){
 	}
 }
 
-void run_exercise3(){
-	HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-}
-
 void timerRun(){
 	if(timer1_counter > 0){
 		timer1_counter--;
