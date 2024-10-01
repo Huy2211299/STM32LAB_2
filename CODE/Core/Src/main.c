@@ -137,14 +137,15 @@ int main(void)
   {
 	  if(timer1_flag == 1){
 		  setTimer1(25);
-		  //TO DO Ex4
+		  //TO DO
 		  update7SEG(index_led++);
 	  }
 	  if(index_led == MAX_LED)index_led = 0;
 	  if(timer2_flag == 1){
 		  setTimer2(100);
-		  //TO DO Ex4
-		  run_exercise4();
+		  //TO DO
+		  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
 	  }
     /* USER CODE END WHILE */
 
