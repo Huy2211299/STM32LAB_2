@@ -161,7 +161,7 @@ void updateClockBuffer(){
 	led_buffer[3] = minute % 10;
 }
 int index_led_matrix = 0;
-uint8_t matrix_buffer [8] = {0x18,0x3c,0x66,0x66,0x7e,0x7e,0x66,0x66};
+uint8_t matrix_buffer [8] = {0x00,0x66,0xff,0xff,0x7e,0x3c,0x18,0x00};
 void shift(int col){
 	HAL_GPIO_WritePin(ENM7_GPIO_Port, ENM7_Pin, 1 - (col & 1));
 	col = col >> 1;

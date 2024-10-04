@@ -1281,7 +1281,7 @@ void updateClockBuffer(){
 
 08000934 <shift>:
 int index_led_matrix = 0;
-uint8_t matrix_buffer [8] = {0x18,0x3c,0x66,0x66,0x7e,0x7e,0x66,0x66};
+uint8_t matrix_buffer [8] = {0x00,0x66,0xff,0xff,0x7e,0x3c,0x18,0x00};
 void shift(int col){
  8000934:	b580      	push	{r7, lr}
  8000936:	b082      	sub	sp, #8
