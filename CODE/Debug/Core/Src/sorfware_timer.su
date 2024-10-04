@@ -2,7 +2,7 @@ sorfware_timer.c:9:6:clock	4	static
 sorfware_timer.c:23:6:display7SEG	16	static
 sorfware_timer.c:120:6:update7SEG	16	static
 sorfware_timer.c:157:6:updateClockBuffer	4	static
-sorfware_timer.c:184:6:setTimer1	16	static
-sorfware_timer.c:189:6:setTimer2	16	static
-sorfware_timer.c:194:6:setTimer3	16	static
-sorfware_timer.c:199:6:timerRun	4	static
+sorfware_timer.c:172:6:setTimer1	16	static
+sorfware_timer.c:177:6:setTimer2	16	static
+sorfware_timer.c:182:6:setTimer3	16	static
+sorfware_timer.c:187:6:timerRun	4	static
