@@ -1213,7 +1213,7 @@ void updateClockBuffer(){
  80008bc:	1ad3      	subs	r3, r2, r3
  80008be:	4a0c      	ldr	r2, [pc, #48]	; (80008f0 <updateClockBuffer+0x78>)
  80008c0:	6093      	str	r3, [r2, #8]
-	led_buffer[3] = minute % 10;
+	led_buffer[3] = minute % 10; //
  80008c2:	4b0c      	ldr	r3, [pc, #48]	; (80008f4 <updateClockBuffer+0x7c>)
  80008c4:	6819      	ldr	r1, [r3, #0]
  80008c6:	4b09      	ldr	r3, [pc, #36]	; (80008ec <updateClockBuffer+0x74>)
